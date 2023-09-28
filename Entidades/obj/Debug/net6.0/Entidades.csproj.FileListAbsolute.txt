@@ -1,0 +1,11 @@
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\bin\Debug\net6.0\Entidades.deps.json
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\bin\Debug\net6.0\Entidades.dll
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\bin\Debug\net6.0\Entidades.pdb
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfo.cs
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.dll
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\refint\Entidades.dll
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\Entidades.pdb
+C:\Users\luanda\Desktop\Calculadora_Basica\Calculadora_Basica\Entidades\obj\Debug\net6.0\ref\Entidades.dll

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Operacion
+    public class Operacion
     {
-        //Atrubutos
+        //Atributos
         private Numeracion primerOperando;
         private Numeracion segundoOperando;
 
         //Constructor
-        public Operacion() 
+        public Operacion(Numeracion primer, Numeracion segundo) 
         {
             // Inicializamos los valores de sus atributos
-            primerOperando = new Numeracion();
-            segundoOperando = new Numeracion();
+            this.primerOperando = primer;
+            this.segundoOperando = segundo;
         }  
 
         //Getters y Setters
@@ -44,5 +44,36 @@ namespace Entidades
                 segundoOperando = value;
             }
         }
+
+        // (Numeracion? = Es numeracion o null. Le agrega la posibilidad de que su valor sea null)
+
+        /// <summary>
+        /// Realiza una operación matemática en función del operador especificado.
+        /// </summary>
+        /// <param name="operador">El operador matemático a aplicar ('+', '-', '*', '/').</param>
+        /// <returns>El resultado de la operación.</returns>
+        public Numeracion Operar(char operador)
+        {
+            Numeracion resultado; 
+            switch (operador)
+            {
+                case '-':
+                    resultado = this.primerOperando - this.segundoOperando;
+                    break;
+
+                case '/':
+                    resultado = this.primerOperando / this.segundoOperando;
+                    break;
+
+                case '*':
+                    resultado = this.primerOperando * this.segundoOperando;
+                    break;
+
+                default:
+                    resultado = this.primerOperando + this.segundoOperando;
+                    break;
+            }
+            return resultado;
+        } 
     }
 }

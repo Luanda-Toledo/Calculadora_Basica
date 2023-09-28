@@ -131,13 +131,12 @@ namespace Entidades
                         binario = (numeroEntero % 2) + binario;
                         numeroEntero /= 2;
                     }
-
                     return binario;
                 }
                 else
                 {
                     // Si no es un entero positivo, retornar "Número inválido"
-                    return "Número inválido";
+                    return "¡Error!\nNo se puden mostrar resultados negativos en binario.";
                 }
             }
             else
@@ -177,7 +176,16 @@ namespace Entidades
                 // Convertir el valor numérico decimal a string
                 resultado = this.ValorNumerico.ToString();
             }
-            return resultado;
+
+            if (valorNumerico != Double.MinValue)
+            {
+                return resultado;
+            }
+            else
+            {
+                return "¡Error!\nAlgo ha salido mal, intente nuevamente.";
+            }
+            
         }
 
         //Un Sistema y una Numeración serán iguales, si el sistema es igual a sistema de la numeración
@@ -206,7 +214,7 @@ namespace Entidades
         public static Numeracion operator +(Numeracion primerNumero, Numeracion segundoNumero)
         {
             double resultado = double.MinValue;
-            if (primerNumero == segundoNumero)
+            if (primerNumero == segundoNumero && (primerNumero.valorNumerico != double.MinValue && segundoNumero.valorNumerico != double.MinValue))
             {
                 resultado = primerNumero.valorNumerico + segundoNumero.valorNumerico;
                 return new Numeracion(primerNumero.Sistema, resultado);
@@ -222,7 +230,7 @@ namespace Entidades
             double resultado = double.MinValue;
             // Que tengan mismo sistema
             // Que no den resultados negativos en los casos de las restas de num binarios
-            if (primerNumero == segundoNumero && (segundoNumero.valorNumerico < primerNumero.valorNumerico && primerNumero.sistema != ESistema.Binario))
+            if (primerNumero == segundoNumero && (primerNumero.valorNumerico != double.MinValue && segundoNumero.valorNumerico != double.MinValue))
             {                  
                 resultado = primerNumero.valorNumerico - segundoNumero.valorNumerico;
                 return new Numeracion(primerNumero.Sistema, resultado);
@@ -236,7 +244,7 @@ namespace Entidades
         public static Numeracion operator *(Numeracion primerNumero, Numeracion segundoNumero)
         {
             double resultado = double.MinValue;
-            if (primerNumero == segundoNumero)
+            if (primerNumero == segundoNumero && (primerNumero.valorNumerico != double.MinValue && segundoNumero.valorNumerico != double.MinValue))
             {
                 resultado = primerNumero.valorNumerico * segundoNumero.valorNumerico;
                 return new Numeracion(primerNumero.Sistema, resultado);
@@ -250,7 +258,7 @@ namespace Entidades
         public static Numeracion operator /(Numeracion primerNumero, Numeracion segundoNumero)
         {
             double resultado = double.MinValue;
-            if (primerNumero == segundoNumero && segundoNumero.valorNumerico != 0) // Sistemas y division por cero
+            if (primerNumero == segundoNumero && segundoNumero.valorNumerico != 0 && (primerNumero.valorNumerico != double.MinValue && segundoNumero.valorNumerico != double.MinValue)) // Sistemas y division por cero
             {
                 resultado = primerNumero.valorNumerico / segundoNumero.valorNumerico;
                 return new Numeracion(primerNumero.Sistema, resultado);
@@ -260,9 +268,6 @@ namespace Entidades
                 return new Numeracion(primerNumero.Sistema, resultado);
             }
         }
-
-
-
 
     }
 }
